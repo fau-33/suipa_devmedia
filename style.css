@@ -1,5 +1,5 @@
 /* ===========================
-   VARIÁVEIS
+VARIÁVEIS
 =========================== */
 :root {
   --azul-principal: #1e5fa8;
@@ -14,8 +14,9 @@
 }
 
 /* ===========================
-   RESET
-=========================== */
+  RESET
+  =========================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@
 
 html {
   scroll-padding-top: 4.5rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,8 +42,8 @@ img {
 }
 
 /* ===========================
-   AVISO EDUCACIONAL
-=========================== */
+  AVISO EDUCACIONAL
+  =========================== */
 .aviso-educacional {
   background-color: #fff8e1;
   border-bottom: 2px solid #f0c040;
@@ -59,8 +61,8 @@ img {
 }
 
 /* ===========================
-   HEADER
-=========================== */
+  HEADER
+  =========================== */
 header {
   background-color: var(--azul-escuro);
   color: var(--branco);
@@ -154,8 +156,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   BOTÕES
-=========================== */
+  BOTÕES
+  =========================== */
 .btn-primario {
   display: inline-block;
   background-color: var(--azul-principal);
@@ -189,8 +191,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   HERO
-=========================== */
+  HERO
+  =========================== */
 .hero {
   background-color: var(--azul-escuro);
   background-image: linear-gradient(135deg, var(--azul-escuro) 60%, #1a4d8a);
@@ -259,8 +261,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   NÚMEROS
-=========================== */
+  NÚMEROS
+  =========================== */
 .numeros {
   background-color: var(--azul-principal);
   display: flex;
@@ -299,8 +301,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   EYEBROW DE SEÇÃO
-=========================== */
+  EYEBROW DE SEÇÃO
+  =========================== */
 .secao-eyebrow {
   display: inline-block;
   font-size: 0.78rem;
@@ -330,8 +332,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   SOBRE
-=========================== */
+  SOBRE
+  =========================== */
 .sobre {
   display: flex;
   gap: 3rem;
@@ -373,8 +375,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   COMO AJUDAR
-=========================== */
+  COMO AJUDAR
+  =========================== */
 .como-ajudar {
   background-color: var(--azul-suave);
   padding: 5rem 2.5rem;
@@ -427,8 +429,55 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   ABRIGO
-=========================== */
+  NOVA SEÇÃO — POR QUE APOIAR
+  =========================== */
+.por-que-apoiar {
+  background-color: var(--branco);
+  padding: 5rem 2.5rem;
+}
+
+.apoio-cards {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.apoio-card {
+  flex: 1;
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.apoio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(30, 95, 168, 0.12);
+}
+
+.apoio-icone {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.apoio-card h3 {
+  font-size: 1.1rem;
+  color: var(--texto-principal);
+  margin-bottom: 0.75rem;
+}
+
+.apoio-card p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--texto-secundario);
+}
+
+/* ===========================
+  ABRIGO
+  =========================== */
 .abrigo {
   display: flex;
   gap: 3rem;
@@ -492,8 +541,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   FRASE
-=========================== */
+  FRASE
+  =========================== */
 .frase {
   background-color: var(--azul-escuro);
   padding: 4rem 2.5rem;
@@ -521,8 +570,8 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   CONTATO
-=========================== */
+  CONTATO
+  =========================== */
 .contato {
   padding: 5rem 2.5rem;
   max-width: 48rem;
@@ -566,10 +615,9 @@ nav ul li a:hover {
   background-color: var(--azul-suave);
 }
 
-
 /* ===========================
-   FOOTER
-=========================== */
+  FOOTER
+  =========================== */
 footer {
   background-color: var(--azul-escuro);
   color: #8aaccf;
@@ -633,8 +681,8 @@ footer {
 }
 
 /* ===========================
-   1024px
-=========================== */
+  1024px
+  =========================== */
 @media (max-width: 1024px) {
   .hero {
     padding: 4rem 2rem;
@@ -646,14 +694,15 @@ footer {
     padding: 4rem 2rem;
   }
 
-  .como-ajudar {
+  .como-ajudar,
+  .por-que-apoiar {
     padding: 4rem 2rem;
   }
 }
 
 /* ===========================
-   768px
-=========================== */
+  768px
+  =========================== */
 @media (max-width: 768px) {
   .menu-links {
     display: none;
@@ -693,8 +742,13 @@ footer {
     padding: 3rem 1.5rem;
   }
 
-  .como-ajudar {
+  .como-ajudar,
+  .por-que-apoiar {
     padding: 3rem 1.5rem;
+  }
+
+  .apoio-cards {
+    flex-direction: column;
   }
 
   .numeros {
@@ -718,8 +772,8 @@ footer {
 }
 
 /* ===========================
-   769px — restaura menu em linha
-=========================== */
+  769px — restaura menu em linha
+  =========================== */
 @media (min-width: 769px) {
   .menu-links:target {
     display: flex;
@@ -737,8 +791,8 @@ footer {
 }
 
 /* ===========================
-   480px
-=========================== */
+  480px
+  =========================== */
 @media (max-width: 480px) {
   header {
     padding: 0 1.25rem;
@@ -772,7 +826,8 @@ footer {
     padding: 2.5rem 1.25rem;
   }
 
-  .como-ajudar {
+  .como-ajudar,
+  .por-que-apoiar {
     padding: 2.5rem 1.25rem;
   }
 
